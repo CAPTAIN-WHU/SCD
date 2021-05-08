@@ -1,0 +1,1 @@
+This the official version of evaluation metrics in the paper, including proposed Separated Kappa (SeK) and mean Intersection Over Union (mIOU).

@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0035)https://captain-whu.github.io/SCD/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>SCD</title>
+	<!-- <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="./SCD_files/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/mystyle.css"> -->
+	<script src="./SCD_files/jquery.min.js.下载"></script>
+	<link rel="stylesheet" href="./SCD_files/bootstrap.min.js.下载">
+	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="content">
+			<h1 style="text-align:center; margin-top:60px; font-weight: bold">
+				Asymmetric Siamese Networks for <br> Semantic Change Detection
+			</h1>
+			<p style="text-align:center; margin-bottom:15px; margin-top:20px; font-size: 18px">
+				<a href="http://www.captain-whu.com/yangkunping.html" target="_blank">Kunping Yang<sup>1,2,3</sup></a>,
+				<a href="http://www.captain-whu.com/xia_En.html" target="_blank">Gui-Song Xia<sup>1,2,3*</sup></a>,
+				<a target="_blank">Zicheng Liu<sup>1,2,3</sup></a>, <br>
+				<a href="http://cs.whu.edu.cn/teacherinfo.aspx?id=254" target="_blank">Bo Du<sup>1,2,3</sup></a>,
+				<a href="http://www.captain-whu.com/yangwen.html" target="_blank">Wen Yang<sup>4</sup></a>,
+				<a href="https://www.dsi.unive.it/~pelillo/" target="_blank">Marcello Pelillo<sup>5</sup></a>.
+			</p>
+			<p style="text-align:center; margin-bottom:15px; margin-top:20px; font-size: 15px;font-style: italic;">
+				1. School of Computer Science, Wuhan University, Wuhan 430072, China <br>
+				2. Institute of Artificial Intelligence, Wuhan University, Wuhan 430072, China <br>
+				3. State Key Lab. LIESMARS, Wuhan University, Wuhan 430072, China <br>
+				4. School of Electronic Information, Wuhan University, Wuhan 430072, China <br>
+				5. DAIS, University of Venice, 30172, Italy <br>
+			</p>
+
+		</div>
+
+		<!-- <br><hr> -->
+
+		<div class="row">
+			<div class="span6 offset2">
+				<ul class="nav nav-tabs">
+					<br>
+				</ul>
+			</div>
+		</div>
+
+		
+				&nbsp;&nbsp;
+				
+				&nbsp;&nbsp;
+				
+				&nbsp;&nbsp;
+				<table style="width:100%;" align="center">
+			<tbody><tr>
+				<td style="text-align: center;" ><a href="./SCD_files/Fig5.png" target="_blank"><img src="./SCD_files/Fig5.png" width=350px height=350px class="img-responsive center-block"> <br> SECOND Dataset </a></td><td style="text-align: center;"><a href="./SCD_files/Semantic_Change_Detection.pdf" target="_blank"><img src="./SCD_files/paper.png" width=185px height=185px class="img-responsive center-block"> <br> Paper</a></td><td style="text-align: center;"><a href="./SCD_files/Semantic_Change_Detection.pdf" target="_blank"><img src="./SCD_files/code.png" width=275px height=275px class="img-responsive center-block"> <br>Codes</a></td>
+			</tr>
+		 </tbody></table>
+
+				<h4 id="Download" style="text-align:left; margin-bottom:10px; margin-top:10px; font-weight: bold; font-style: italic">
+					- Data and codes Download
+				</h4>
+				<p style="text-align:justify; font-size: 16px">
+					SECOND dataset and codes will be released for public accessibility.
+				</p>
+				<ul>
+					<li style="font-size:16px">
+						<a href=" ">SECOND Download</a> (<i>Coming soon ...</i> )
+					</li>
+				</ul>
+
+				<ul>
+					<li style="font-size:16px">
+						<a href=" ">Codes Download</a> (<i>Coming soon ...</i> )
+					</li>
+				</ul>
+
+		<div class="row">
+			<div class="span12">
+				<h3 style="text-align:left; margin-bottom:10px; margin-top:20px; font-weight: bold">
+					1. Abstract
+				</h3>
+				<p style="text-align:justify; font-size: 16px; text-indent: 2em">
+
+					Given two multi-temporal aerial images, semantic change detection aims to locate the land-cover variations and identify their categories with pixel-wise boundaries. The problem has demonstrated promising potentials in many earth vision related tasks, such as precise urban planning and natural resource management. Existing state-of-the-art algorithms mainly identify the changed pixels through symmetric modules, which would suffer from categorical ambiguity caused by changes related to totally different land-cover distributions. In this paper, we present an <i> asymmetric siamese network </i> (ASN) to locate and identify semantic changes through feature pairs obtained from modules of widely different structures, which involve different spatial ranges and quantities of parameters to factor in the discrepancy across different land-cover distributions. To better train and evaluate our model, we create a large-scale well-annotated <i> SEmantic Change detectiON Dataset </i> (SECOND), while an <i> adaptive threshold learning </i> (ATL) module and a <i> separated kappa </i> (SeK) coefficient are proposed to alleviate the influences of label imbalance in model training and evaluation. The experimental results demonstrate that the proposed model can stably outperform the state-of-the-art algorithms with different encoder backbones.
+				</p>
+			</div>
+		</div>
+
+		<br>
+		<div class="row">
+			<div class="span12">
+				
+				<h3 id="SCD" style="text-align:left; margin-bottom:10px; margin-top:20px; font-weight: bold">
+					2. The SEmantic Change detectiON Dataset (SECOND)
+				</h3>
+				<p style="text-align:justify; font-size: 16px; text-indent: 2em">
+In order to set up a new benchmark for SCD problems with adequate quantities, sufficient categories and proper annotation methods, in this paper we present SECOND, a well-annotated semantic change detection dataset. To ensure data diversity, we firstly collect 4662 pairs of aerial images from several platforms and sensors. These pairs of images are distributed over the cities such as Hangzhou, Chengdu, and Shanghai. Each image has size 512 x 512 and is annotated at the pixel level. The annotation of SECOND is carried out by an expert group of earth vision applications, which guarantees high label accuracy. For the change category in the SECOND dataset, we focus on 6 main land-cover classes, <i> i.e. </i>, <i> non-vegetated ground surface, tree, low vegetation, water, buildings </i> and <i> playgrounds </i>, that are frequently involved in natural and man-made geographical changes. It is worth noticing that, in the new dataset, non-vegetated ground surface  (<i>  n.v.g. surface </i> for short) mainly corresponds to <i> impervious surface </i> and <i> bare land </i>. In summary, these 6 selected land-cover categories result in 30 common change categories (including <i> non-change </i>). Through the random selection of image pairs, the SECOND reflects real distributions of land-cover categories when changes occur.
+				</p>
+				<img src="./SCD_files/data_samples.png" width="700px" class="img-responsive center-block">
+				<p style="text-align:justify; font-size: 12px">
+Fig.1 Several samples of our proposed SECOND dataset. Color white indicates \emph{non-change} regions, while other colors indicate different land-cover categories. Ground truth for SCD can be obtained by comparing the annotated land-cover categories.
+</p>
+
+			</div>
+		</div>
+
+		<br>
+		<div class="row">
+			<div class="span12">
+				<h3 id="Million-AID" style="text-align:left; margin-bottom:10px; margin-top:20px; font-weight: bold">
+					3. Evaluation Metirc
+				</h3>
+				<p style="text-align:justify; font-size: 16px; text-indent: 2em">
+					In order to alleviate the influence of label imbalance, we utilize Mean Intersection Over Union (mIOU) to evaluate BCD results and propose a Separate Kappa (SeK) coefficient to evaluate SCD results.
+				</p>
+				<h4 style="text-align:left; margin-bottom:10px; margin-top:10px; font-weight: bold; font-style: italic">
+					- Mean Intersection Over Union
+				</h4>
+				<p style="text-align:justify; font-size: 16px; text-indent: 2em">
+				Specifically, given a confusion matrix Q, we define categorical IOU and mIOU as :
+				</p>
+<img src="./SCD_files/IOU1.png" width="250px" class="img-responsive center-block">
+				
+<img src="./SCD_files/IOU2.png" width="190px" class="img-responsive center-block">
+
+	<p style="text-align:justify; font-size: 16px; text-indent: 2em">
+				Categorical IOU measure the identification of <i> non-change </i> pixels and evaluates the extraction of changed regions. Compared with Overall Accuracy (OA), mIOU considers more about changed regions.
+				</p>
+
+				<h4 style="text-align:left; margin-bottom:10px; margin-top:10px; font-weight: bold; font-style: italic">
+					- Separate Kappa
+</h4>
+				
+<p style="text-align:justify; font-size: 16px; text-indent: 2em">
+				On the other hand, the true positive of <i> non-change </i> pixels <span style="font-size:15px">`q_{11}`</span> always dominates the calculation of Kappa. Thus, we separate <span style="font-size:15px">`q_{11}`</span> in the calculation of SeK. We also utilize categorical IOU to further emphasize changed pixels.
+	Specifically, we define
+				</p>
+
+				<img src="./SCD_files/Sek1.png" width="260px" class="img-responsive center-block">
+
+				<img src="./SCD_files/Sek2.png" width="220px" class="img-responsive center-block">
+<p>
+where the exponential form enlarges the discernibility compared with simple multiplication for better models. We collect visual scores between 0 and 1 <span style="font-size:12px">`w.r.t.`</span>each result from 11 remote sensing image interpretation experts. As illustrated in the following figure, compared with Kappa and OA, models with apparently poor performances on small change categories would get low scores in SeK no matter how good the performances on BCD are. Moreover, the Mean Square Error (MSE) between SeK and human scores is 0.003. While, MSE <span style="font-size:12px">`w.r.t.`</span>OA and Kappa are 0.212 and 0.028 respectively, which further validates the rationality of SeK.
+</p>
+				<img src="./SCD_files/Label2.png" width="850px" class="img-responsive center-block">
+
+<p style="text-align:justify; font-size: 12px">
+	Fig.2 Given a change detection data sample, <i> i.e. </i> a pair of images and a sequence of change detection results, we collect visual scores between 0 and 1 <i> w.r.t. </i> each result from 11 remote sensing image interpretation experts. Meanwhile, we calculate evaluation scores of each result based on OA and Kappa. Compared with OA and Kappa, SeK is more in line with human scoring in SCD problem.
+</p>
+				<h3 id="Million-AID" style="text-align:left; margin-bottom:10px; margin-top:20px; font-weight: bold">
+					4. Experiment Analyses
+				</h3>
+<p style="text-align:justify; font-size: 16px; text-indent: 2em">
+The change detection algorithms involved in the comparison experiments are as follows:
+		<br>	
+		 - FC-EF: a BCD algorithm using single encoder-decoder structure. 
+		<br>
+		 - FC-conc: a BCD algorithm using siamese encoders followed with single decoder branch and concatenation skip connections from the encoder to the decoder. 
+		<br>
+		 - FC-diff: a BCD algorithm using siamese encoders followed with single decoder branch and difference skip connections from the encoder to the decoder. 
+		<br>
+		 - HRSCD.str1: an algorithm corresponding to the intuitive solution to SCD problem through direct application of semantic segmentation. 
+		<br>
+		 - HRSCD.str2: a SCD algorithm using single encoder-decoder structure. 
+		<br>
+		 - HRSCD.str3: a SCD algorithm using siamese semantic segmentation branches with change detection branch. 
+		<br>
+		 - HRSCD.str4: a SCD algorithm using siamese semantic segmentation branches with change detection branch and difference skip connections from siamese encoders to the decoder of change detection branch. 
+		<br>
+</p>
+<p style="text-align:justify; font-size: 16px; text-indent: 2em">
+	In the training process, SGD is utilized to search optimal parameters for 50 epochs. Random flip and random scale between 0.5 and 2 are utilized as the data augmentation.
+	The initial learning rate is set as 0.005 and 'poly' policy is employed with the power of 0.9. Also, the momentum is set as 0.9 and weight decay is set as 0.0001.
+	In the testing process, we apply flip strategy and multi-scale (MS) testing with 6 scales which are 0.5, 0.75, 1.0, 1.25, 1.5 and 1.75. Batch size is set as 4. All the models are trained from scratch without post-processings.
+</p>
+				<h4 style="text-align:left; margin-bottom:10px; margin-top:10px; font-weight: bold; font-style: italic">
+					- Evaluation and visual results when the encoder is built on residual blocks.
+				</h4>
+<p  align="center" style="font-size: 12px">
+Comparison with state-of-the-art methods when the encoder is built on residual blocks.
+</p>
+			<img src="./SCD_files/Table_res.png" width="350px" class="img-responsive center-block">				
+				<img src="./SCD_files/Fig_res.png" width="720px" class="img-responsive center-block">
+<p style="text-align:justify; font-size: 12px">
+Visual results of comparison with state-of-the-art method when the encoder is built on residual blocks. We mask the semantic maps with change maps to represent the prediction of change category in each position, where our proposed ASN can better identify land-cover categories and alleviate false identifications of <i> non-change </i> pixels.
+</p>
+
+				<h4 style="text-align:left; margin-bottom:10px; margin-top:10px; font-weight: bold; font-style: italic">
+					- Detail comparsion results when the encoder is built on residual blocks.
+				</h4>
+<p style="text-align:justify; font-size: 12px">
+Detail categorical results with three kinds of testing strategies when the encoder is built on residual blocks. Top sheets are without testing strategy. Middle sheets are with MS testing strategy. Bottom sheets are with MS and Flip testing strategy. The categorical SeK is listed in the matrices, while the categorical intersection over union (<i font-style: normal;>IOU_1,IOU_2</i>) of binary change detection is listed below each matrices.
+</p>
+			<img src="./SCD_files/Detail.png" width="690px" class="img-responsive center-block">
+
+				<h4 style="text-align:left; margin-bottom:10px; margin-top:10px; font-weight: bold; font-style: italic">
+					- Visult results on mentioned asymmetric changes.
+				</h4>
+
+			<img src="./SCD_files/Echo.png" width="600px" class="img-responsive center-block">
+<p style="text-align:justify; font-size: 12px">
+Result visualizations of the case discussed in our paper when the encoder is built on residual blocks. ASN can extract changed regions and identify change categories more precisely, while addressing these asymmetric changes.
+</p>
+
+<h4 id="Download" style="text-align:left; margin-bottom:10px; margin-top:10px; font-weight: bold; font-style: italic">
+					More details can be found in the paper.
+				</h4>
+
+			</div>
+		</div>
+
+		<br>
+		<div class="row">
+			<div class="span12">
+
+				<h3 style="text-align:left; margin-bottom:10px; margin-top:20px; font-weight: bold">
+					Contact
+				</h3>
+				<p>
+					If you have any problem, please contact:
+				</p><ul>
+					<li>kunping yang at <strong>kunpingyang@whu.edu.cn</strong></li>
+					<li>Gui-Song Xia at <strong>guisong.xia@whu.edu.cn</strong></li>
+				</ul>
+				<br>
+				<br>
+				<br>
+			</div>
+		</div>
+
+<!-- 		<div class="row">
+			<div style="text-align:center; margin-top:0; margin-bottom: 20px;">
+				<embed id="map" src="http://rf.revolvermaps.com/f/f.swf" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" allowScriptAccess="always" allowNetworking="all" width="150" height="75" flashvars="m=0&amp;i=5dp1mfnunae&amp;r=10&amp;c=fffdc0" loop="true" autostart="False"></embed> 
+				<img class="img-responsive center-block" src="http://rf.revolvermaps.com/js/c/5dp1mfnunae.gif" width="1" height="1" alt="" value="True"/>
+				<a style="font-size: x-small;"> Copyight@2020, Captain</a>
+				<a href="http://www.revolvermaps.com/livestats/5dp1mfnunae/"></a>
+			</div>
+		</div> -->
+
+
+
+</div></body></html>
